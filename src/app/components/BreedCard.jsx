@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaRegStar } from "react-icons/fa";
+import FavoriteButton from "./FavoriteButton"
 
 
 const BreedCard = ({ className = "", breedname, from }) => {
@@ -14,7 +14,7 @@ const BreedCard = ({ className = "", breedname, from }) => {
       />
 
       <div className="col-start-1 row-start-1 z-10 m-3 justify-self-end self-start">
-        <FaRegStar className="size-10" />
+        <FavoriteButton />
       </div>
 
       <div className="p-4 gap-4 text-gray-700">
