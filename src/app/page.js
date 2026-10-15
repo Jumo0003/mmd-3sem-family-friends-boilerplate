@@ -5,6 +5,15 @@ import BreedCard from "./components/BreedCard";
 import { LiaSearchSolid } from "react-icons/lia";
 
 export default function ListView() {
+ const breeds = [
+    { id: 1, breedname: "Affenpinscher", from: "Germany" },
+    { id: 2, breedname: "Afghan Hound", from: "Afghanistan" },
+    { id: 3, breedname: "Airedale Terrier", from: "England" },
+    { id: 4, breedname: "Akbash", from: "Turkey" },
+    { id: 5, breedname: "Akita", from: "Japan" },
+    { id: 6, breedname: "Alaskan Malamute", from: "USA" },
+  ];
+
   return (
     <>
       <div className="flex gap-4 m-4 items-center">
@@ -18,60 +27,17 @@ export default function ListView() {
           placeholder="search breeds"
         />
       </div>
-
       <section className="grid grid-cols-2 p-4 gap-4">
-        <Link href="/detailview">
-        <BreedCard
-          className="shadow-xl rounded-3xl grid"
-          breedname="Creepy dawg"
-          from="Brazil"
-        />
-        </Link>
-              </section>
-                  <section className="grid grid-cols-2 p-4 gap-4">
-        <Link href="/detailview">
-        <BreedCard
-          className="shadow-xl rounded-3xl grid"
-          breedname="Creepy dawg"
-          from="Brazil"
-        />
-        </Link>
-              </section>
-                  <section className="grid grid-cols-2 p-4 gap-4">
-        <Link href="/detailview">
-        <BreedCard
-          className="shadow-xl rounded-3xl grid"
-          breedname="Creepy dawg"
-          from="Brazil"
-        />
-        </Link>
-              </section>
-                  <section className="grid grid-cols-2 p-4 gap-4">
-        <Link href="/detailview">
-        <BreedCard
-          className="shadow-xl rounded-3xl grid"
-          breedname="Creepy dawg"
-          from="Brazil"
-        />
-        </Link>
-              </section>
-                  <section className="grid grid-cols-2 p-4 gap-4">
-        <Link href="/detailview">
-        <BreedCard
-          className="shadow-xl rounded-3xl grid"
-          breedname="Creepy dawg"
-          from="Brazil"
-        />
-        </Link>
-              </section>
-                  <section className="grid grid-cols-2 p-4 gap-4">
-        <Link href="/detailview">
-        <BreedCard
-          className="shadow-xl rounded-3xl grid"
-          breedname="Creepy dawg"
-          from="Brazil"
-        />
-        </Link>
+
+        {breeds.map((breed) => (
+          <Link href="/detailview" key={breed.id}>
+            <BreedCard
+              className="breed-card"
+              breedname={breed.breedname}
+              from={breed.from}
+            />
+          </Link>
+        ))}
               </section>
      </>
    );

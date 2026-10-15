@@ -17,3 +17,10 @@
   --color-darkgreentext: #6B8B42;
  
 }
+
+@layer components {
+.breed-card{
+  @apply bg-white rounded-3xl shadow-xl grid;
+}
+
+}

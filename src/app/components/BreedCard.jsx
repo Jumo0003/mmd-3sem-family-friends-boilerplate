@@ -10,7 +10,7 @@ const BreedCard = ({ className = "", breedname, from }) => {
         alt="Creepy dogg"
         width={500}
         height={500}
-        className="col-start-1 row-start-1 rounded-3xl aspect-4/3 object-cover"
+        className="col-start-1 row-start-1 rounded-3xl aspect-4/3 object-cover w-full"
       />
 
       <div className="col-start-1 row-start-1 z-10 m-3 justify-self-end self-start">
