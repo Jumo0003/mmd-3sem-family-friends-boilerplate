@@ -27,10 +27,10 @@ export default function ListView() {
           placeholder="search breeds"
         />
       </div>
-      <section className="grid grid-cols-2 p-4 gap-4">
+      <section className="columns-2 p-4 gap-6">
 
         {breeds.map((breed) => (
-          <Link href="/detailview" key={breed.id}>
+          <Link href="/detailview" key={breed.id} className="mb-4 block break-inside-avoid">
             <BreedCard
               className="breed-card"
               breedname={breed.breedname}
