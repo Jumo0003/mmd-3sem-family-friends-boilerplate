@@ -18,7 +18,7 @@ const BreedCard = ({ className = "", breedname, from }) => {
       </div>
 
       <div className="p-4 gap-4 text-gray-700">
-        <h2 className="font-bold text-xl leading-10">{breedname}</h2>
+        <h2 className="font-bold text-lg leading-10">{breedname}</h2>
         <p className="text-sx">{from}</p>
       </div>
     </div>
