@@ -1,5 +1,6 @@
 import { Manrope } from "next/font/google";
 import Header from "./components/Header"
+import BottomNav from "./components/BottomNav"
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -18,7 +19,10 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col font-sans">
       <Header />
+      <main className="pb-24">
         {children}
+          <BottomNav />
+          </main>
       </body>
     </html>
   );
