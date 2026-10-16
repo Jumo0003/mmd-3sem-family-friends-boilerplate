@@ -4,6 +4,7 @@ import "./globals.css";
 import BreedCard from "./components/BreedCard";
 import { LiaSearchSolid } from "react-icons/lia";
 
+
 export default function ListView() {
  const breeds = [
     { id: 1, breedname: "Affenpinscher", from: "Germany" },
