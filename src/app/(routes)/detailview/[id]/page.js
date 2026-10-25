@@ -1,14 +1,14 @@
 import Link from "next/link";
-import DetailHero from "../../components/DetailHero";
-import Tag from "../../components/Tag";
+import DetailHero from "../../../components/DetailHero";
+import Tag from "../../../components/Tag";
 import InfoSection from "@/app/components/InfoSection";
 
-const DetailView = () => {
+const DetailView = async ({params}) => {
+  const { id } = await params;
   return (
     <>
-     
          <DetailHero />
-         <h1 className="font-bold text-2xl p-4">Affenpinscher</h1>
+         <h1 className="font-bold text-2xl p-4">"dog name"{id} </h1>
          <div className="flex flex-wrap gap-2 px-4">
 <Tag label="Confident" className="bg-confident text-confident-text" />
 <Tag label="Alert" className="bg-alert text-alert-text" />
