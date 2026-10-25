@@ -6,15 +6,15 @@ import Link from "next/link";
 
 
 const BreedList = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
- const breeds = [
-    { id: 1, breedname: "Affenpinscher", from: "Germany" },
-    { id: 2, breedname: "Afghan Hound", from: "Afghanistan" },
-    { id: 3, breedname: "Airedale Terrier", from: "England" },
-    { id: 4, breedname: "Akbash", from: "Turkey" },
-    { id: 5, breedname: "Akita", from: "Japan" },
-    { id: 6, breedname: "Alaskan Malamute", from: "USA" },
-  ];
+   
+
+    const response = await fetch("https://api.thedogapi.com/v1/breeds?limit=10", {
+    headers: {
+      "x-api-key": process.env.DOG_API_KEY,
+    },
+  });
+
+  const breeds = await response.json();
 
     return breeds.map((breed) => (
     <Link
@@ -24,8 +24,9 @@ const BreedList = async () => {
     >
       <BreedCard
         className="breed-card"
-        breedname={breed.breedname}
-        from={breed.from}
+        breedname={breed.name}
+        from={breed.origin}
+        image={breed.image?.url}
       />
     </Link>
   ));

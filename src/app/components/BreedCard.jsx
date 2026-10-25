@@ -2,11 +2,11 @@ import Image from "next/image";
 import FavoriteButton from "./FavoriteButton"
 
 
-const BreedCard = ({ className = "", breedname, from }) => {
+const BreedCard = ({ className = "", breedname, from, image }) => {
   return (
     <div className={className}>
       <Image
-        src="/dummydog.jpg"
+        src={image || "/dummydog.jpg"}
         alt="Creepy dogg"
         width={500}
         height={500}
