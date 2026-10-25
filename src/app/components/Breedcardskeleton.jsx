@@ -1,8 +1,8 @@
 
 
-const BreedcardSKeleton = () => {
+const BreedCardSkeleton = () => {
     return (
-        <div className="breed-card animate-pulse">
+        <div className="breed-card animate-pulse mb-4 break-inside-avoid">
 
 
         <div className="aspect-[4/3] w-full rounded-3xl bg-gray-200" />
