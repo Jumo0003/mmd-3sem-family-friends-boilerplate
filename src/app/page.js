@@ -3,7 +3,7 @@ import Logo from "./components/Logo";
 import "./globals.css";
 import { Suspense } from "react";
 import { LiaSearchSolid } from "react-icons/lia";
-import BreedCardSkeleton from "./components/BreedCardskeleton";
+import BreedCardSkeleton from "./components/BreedcardSkeleton";
 import BreedList from "./components/BreedList";
 
 
