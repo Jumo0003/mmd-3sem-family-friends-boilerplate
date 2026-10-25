@@ -3,6 +3,7 @@ import Logo from "./components/Logo";
 import "./globals.css";
 import BreedCard from "./components/BreedCard";
 import { LiaSearchSolid } from "react-icons/lia";
+import BreedCardSkeleton from "./components/BreedCardSkeleton";
 
 
 export default function ListView() {
@@ -29,7 +30,7 @@ export default function ListView() {
         />
       </div>
       <section className="columns-2 p-4 gap-6">
-
+<BreedCardSkeleton />
         {breeds.map((breed) => (
           <Link href="/detailview" key={breed.id} className="mb-4 block break-inside-avoid">
             <BreedCard
