@@ -6,11 +6,11 @@ import FavoriteButton from "./FavoriteButton";
 import Link from "next/link";
 import BreedBadge from "./BreedBadge";
 
-const DetailHero = () => {
+const DetailHero = ({ image, name }) => {
 return (
      <div className="grid m-4">
       <Image
-        src="/dummydog.jpg"
+        src={image || "/dummydog.jpg"}
         alt="Dog"
         width={500}
         height={500}
@@ -21,7 +21,7 @@ return (
         <FavoriteButton className="size-10" />
       </div>
       <div className="col-start-1 row-start-1 z-10 self-end justify-self-start p-4">
-  <BreedBadge name="Affenpinscher" />
+  <BreedBadge name={name} image={image}/>
 </div>
     </div>
 )

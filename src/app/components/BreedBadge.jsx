@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-const BreedBadge = ({ name }) => {
+const BreedBadge = ({ name, image }) => {
   return (
     <div className="flex items-center gap-2 bg-white/60 rounded-2xl p-1 pr-4 pl-2">
       <Image
-        src="/dummydog.jpg"
+        src= {image || "/dummydog.jpg"}
         alt={name}
         width={100}
         height={100}
