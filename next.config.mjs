@@ -8,8 +8,14 @@ const nextConfig = {
         hostname: '*.thedogapi.com',
         pathname: '/**',
       },
+          {
+      protocol: "https",
+      hostname: "storage.googleapis.com",
+      pathname: "/dog-api-uploads-prod/**",
+    },
     ],
   },
+
 };
 
 export default nextConfig;
