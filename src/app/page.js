@@ -18,7 +18,7 @@ export default function ListView() {
   return (
     <>
       <div className="flex gap-4 m-4 items-center">
-        <div className="bg-coral rounded-full p-3 text-white">
+        <div className="bg-pink rounded-full p-3 text-white">
           <LiaSearchSolid className="size-10" />
         </div>
 
