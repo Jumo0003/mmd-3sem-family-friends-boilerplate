@@ -7,14 +7,17 @@
 }
 
 @theme {
-  --color-coral: #F76C5E;
+  --color-pink: #F2968F;
   --color-confident: #ACD7FF;
   --color-alert: #EDA8B3;
   --color-playful: #C5E59C;
   --color-loyal: #F1E689; 
 
-  --color-gullischtext: #978C2F;
-  --color-darkgreentext: #6B8B42;
+
+--color-confident-text: #1F4E79;
+--color-alert-text: #8A2F43;
+--color-playful-text: #466B21;
+--color-loyal-text: #7A6A12;
  
 }
 

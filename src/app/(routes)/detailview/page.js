@@ -10,10 +10,10 @@ const DetailView = () => {
          <DetailHero />
          <h1 className="font-bold text-2xl p-4">Affenpinscher</h1>
          <div className="flex flex-wrap gap-2 px-4">
-  <Tag label="Confident" className="bg-confident" />
-  <Tag label="Alert" className="bg-alert" />
-  <Tag label="Playful" className="bg-playful" />
-  <Tag label="Loyal" className="bg-loyal" />
+<Tag label="Confident" className="bg-confident text-confident-text" />
+<Tag label="Alert" className="bg-alert text-alert-text" />
+<Tag label="Playful" className="bg-playful text-playful-text" />
+<Tag label="Loyal" className="bg-loyal text-loyal-text" />
 </div>
 <InfoSection
   title="Breed description"
