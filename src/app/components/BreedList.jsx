@@ -5,10 +5,12 @@ import BreedCard from "./BreedCard";
 import Link from "next/link";
 
 
-const BreedList = async () => {
-   
+const BreedList = async ({ query }) => {
+   const url = query
+    ? `https://api.thedogapi.com/v1/breeds/search?q=${query}`
+    : "https://api.thedogapi.com/v1/breeds?";
 
-    const response = await fetch("https://api.thedogapi.com/v1/breeds?limit=10", {
+    const response = await fetch(url, {
     headers: {
       "x-api-key": process.env.DOG_API_KEY,
     },
