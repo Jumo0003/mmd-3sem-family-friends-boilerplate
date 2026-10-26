@@ -38,9 +38,7 @@ const DetailView = async ({params}) => {
 
 <InfoSection
 title="Bred for" text={breed.description || "Ukendt"}
-
 />
-
 <InfoSection 
 title="History" text={breed.history || "Ukendt"}   
 />

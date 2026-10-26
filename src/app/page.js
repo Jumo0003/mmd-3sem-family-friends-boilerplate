@@ -5,25 +5,31 @@ import { Suspense } from "react";
 import { LiaSearchSolid } from "react-icons/lia";
 import BreedCardSkeleton from "./components/BreedcardSkeleton";
 import BreedList from "./components/BreedList";
+import Form from "next/form"
 
 
-export default function ListView() {
+export default async function ListView({ searchParams }) {
+const { query } = await searchParams;
+  
   return (
     <>
-      <div className="flex gap-4 m-4 items-center">
+      <Form action="/" className="flex gap-4 m-4 items-center">
         <div className="bg-pink rounded-full p-3 text-white">
           <LiaSearchSolid className="size-10" />
         </div>
 
         <input
           type="text"
+           name="query"
           className="p-4 border-gray-300 border-2 rounded-full w-full"
           placeholder="search breeds"
         />
-      </div>
+      </Form>
 
       <section className="columns-2 p-4 gap-6">
-        <Suspense fallback= {   
+        <Suspense
+        key={query}
+        fallback= {   
            <>
       {Array.from({ length: 6 }).map((_, i) => (
         <BreedCardSkeleton key={i} />
@@ -31,7 +37,7 @@ export default function ListView() {
     </>
   }
 >
-  <BreedList />
+  <BreedList query={query}/>
         </Suspense>
 
               </section>
