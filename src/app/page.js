@@ -14,13 +14,14 @@ const { query } = await searchParams;
   return (
     <>
       <Form action="/" className="flex gap-4 m-4 items-center">
-        <div className="bg-pink rounded-full p-3 text-white">
+        <button type="submit" className="bg-pink rounded-full p-3 text-white">
           <LiaSearchSolid className="size-10" />
-        </div>
+        </button>
 
         <input
           type="text"
            name="query"
+           required
           className="p-4 border-gray-300 border-2 rounded-full w-full"
           placeholder="search breeds"
         />
