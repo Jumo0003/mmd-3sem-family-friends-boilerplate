@@ -19,6 +19,7 @@ const BreedList = async ({ query }) => {
   const breeds = await response.json();
 
     return breeds.map((breed) => (
+      <FavoriteElement id={breed.image.id} breed={breed.name}/>
     <Link
       href={`/detailview/${breed.id}`}
       key={breed.id}
