@@ -3,7 +3,7 @@ import Logo from "./components/Logo";
 import "./globals.css";
 import { Suspense } from "react";
 import { LiaSearchSolid } from "react-icons/lia";
-import BreedCardSkeleton from "./components/BreedcardSkeleton";
+import BreedCardskeleton from "./components/Breedcardskeleton";
 import BreedList from "./components/BreedList";
 import Form from "next/form"
 
@@ -33,7 +33,7 @@ const { query } = await searchParams;
         fallback= {   
            <>
       {Array.from({ length: 6 }).map((_, i) => (
-        <BreedCardSkeleton key={i} />
+        <BreedCardskeleton key={i} />
       ))}
     </>
   }
