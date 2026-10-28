@@ -1,8 +1,9 @@
 import Image from "next/image";
 import FavoriteButton from "./FavoriteButton"
+import FavoriteElement from "./FavoriteElement";
 
 
-const BreedCard = ({ className = "", breedname, from, image }) => {
+const BreedCard = ({ className = "", breedname, from, image, imageId, isFavorite, favoriteId    }) => {
   return (
     <div className={className}>
       <Image
@@ -14,7 +15,7 @@ const BreedCard = ({ className = "", breedname, from, image }) => {
       />
 
       <div className="col-start-1 row-start-1 z-10 m-3 justify-self-end self-start">
-        <FavoriteButton />
+        <FavoriteElement id={imageId} breed={breedname} isFavorite={isFavorite} favoriteId={favoriteId} />
       </div>
 
       <div className="p-4 gap-4 text-gray-700">

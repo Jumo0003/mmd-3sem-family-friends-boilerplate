@@ -8,12 +8,24 @@ export const addFavorite = async (id)=> {
     const response = await fetch ("https://api.thedogapi.com/v1/favourites", {
         method: "POST", 
         headers: {
-       "x-api-key": process.env.DOG_API_KEY, 
+       "x-api-key": process.env.DOG_API_KEY,
+       "Content-Type": "application/json",
         }, 
         body: JSON.stringify ({
-            "breed.image.id": '${id}',
+           image_id: id,
         }),
     }); 
 
-    console.log("response", response)
+    const data = await response.json();
+   return data.id; 
+      
 }; 
+
+export const removeFavorite = async (favoriteId) => {
+  await fetch(`https://api.thedogapi.com/v1/favourites/${favoriteId}`, {
+    method: "DELETE",
+    headers: {
+      "x-api-key": process.env.DOG_API_KEY,
+    },
+  });
+};

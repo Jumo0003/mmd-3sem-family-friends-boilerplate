@@ -15,6 +15,14 @@ const DetailView = async ({params}) => {
   const breed = await response.json();
   console.log(breed);
 
+  const favResponse = await fetch("https://api.thedogapi.com/v1/favourites", {
+  headers: {
+    "x-api-key": process.env.DOG_API_KEY,
+  },
+});
+const favourites = await favResponse.json();
+const favourite = favourites.find((fav) => fav.image_id === breed.image?.id);
+
   const colors = [
   "bg-confident text-confident-text",
   "bg-alert text-alert-text",
@@ -24,7 +32,12 @@ const DetailView = async ({params}) => {
 
   return (
     <>
-         <DetailHero image={breed.image?.url} name={breed.name}/>
+         <DetailHero image={breed.image?.url} 
+         name={breed.name} 
+          imageId={breed.image?.id}
+  isFavorite={Boolean(favourite)}
+  favoriteId={favourite?.id}/>
+  
          <h1 className="font-bold text-2xl p-4">{breed.name} </h1>
          <div className="flex flex-wrap gap-2 px-4">
  {breed.temperament?.split(", ").map((trait, index) => (
